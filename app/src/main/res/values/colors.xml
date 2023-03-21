@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#367ed1</color>
     <color name="lemon">#DCF72A</color>
-
+    <color name="red">#FF0000</color>
     <color name="yellow">#FFC801</color>
     <color name="bg_color">#040507</color>
     <color name="bg_card_color">#423F5B</color>

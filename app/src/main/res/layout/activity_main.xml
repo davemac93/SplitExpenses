@@ -28,7 +28,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/addFriend"
+        android:id="@+id/FriendsList"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="Add Friend"
