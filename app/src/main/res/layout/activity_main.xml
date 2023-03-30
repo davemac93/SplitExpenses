@@ -7,17 +7,7 @@
     android:background="@drawable/main_screen"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/mainTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="160px"
-        android:text="Your Events"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"
-        android:textSize="60px"/>
+
 
     <ListView
         android:id="@+id/list_view"
@@ -31,7 +21,7 @@
         android:id="@+id/FriendsList"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="Add Friend"
+        android:text="Friends"
         android:background="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/AddEvent"

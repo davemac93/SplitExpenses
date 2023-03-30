@@ -1,12 +1,19 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="title_activity_friends_lsit">friends_lsit</string>
+    <string name="app_name" translatable="false">My Application</string>
+    <string name="title_activity_friends_lsit" translatable="false">friends_lsit</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
+    <string name="add_full_name" translatable="false">Full Name</string>
+    <string name="add_new_contact" translatable="false">Add Contact</string>
+    <string name="add_contact_number" translatable="false">Contact Number</string>
+    <string name="save_contact" translatable="false">Save Contact</string>
+    <string name="added_contact">Contact has been added successfully</string>
+    <string name="error">%1$%</string>
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 </resources>

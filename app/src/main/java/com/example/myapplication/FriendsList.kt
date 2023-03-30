@@ -10,11 +10,6 @@ class FriendsList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_friends_list)
 
-        val buttonClick = findViewById<Button>(R.id.AddFriends)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, AddFriend::class.java)
-            startActivity(intent)
-        }
 
     }
 }
