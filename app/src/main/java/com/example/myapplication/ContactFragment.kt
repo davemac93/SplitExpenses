@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.myapplication.databinding.FragmentContactBinding
 import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 
 
 class ContactFragment : Fragment() {
@@ -15,6 +17,8 @@ class ContactFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val adapter = ContactAdapter()
+
+    private lateinit var viewModel: ContactViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +30,7 @@ class ContactFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentContactBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this).get(ContactViewModel::class.java)
         return binding.root
     }
 
@@ -38,6 +43,12 @@ class ContactFragment : Fragment() {
             val dialogFragment = AddContactDialogFragment()
             dialogFragment.show(childFragmentManager, "AddContactDialogFragment")
         }
+
+        viewModel.contact.observe(viewLifecycleOwner, Observer {
+            adapter.addContact(it)
+        })
+
+        viewModel.getRealTimeUpdate()
     }
     public override fun onDestroy() {
         super.onDestroy()

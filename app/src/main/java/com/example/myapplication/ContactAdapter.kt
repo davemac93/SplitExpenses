@@ -21,6 +21,14 @@ class ContactAdapter: RecyclerView.Adapter<ContactAdapter.ViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.binding.textViewName.text = contacts[position].fullName
+        holder.binding.textViewContact.text = contacts[position].contactNumber
+    }
 
+    fun addContact(contact: Contact){
+        if(!contacts.contains(contact)){
+            contacts.add(contact)
+        }
+        notifyDataSetChanged()
     }
 }
