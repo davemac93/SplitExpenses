@@ -11,13 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".NewEvent"
+            android:name=".SelectParticipantsActivity"
             android:exported="false" />
         <activity
-            android:name=".AddFriend"
+            android:name=".EditExpenseActivity"
             android:exported="false" />
         <activity
-            android:name=".FriendsList"
+            android:name=".AddExpenseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddEventParticipantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddFriendActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"

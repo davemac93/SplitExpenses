@@ -4,59 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/AddEvent"
-        app:layout_constraintTop_toBottomOf="@+id/logout_button" />
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/FriendsList"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Friends"
-        android:background="@color/blue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/AddEvent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/AddEvent"
-        android:layout_width="150dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="80dp"
-        android:background="@color/lemon"
-        android:text="Add Event"
-        android:textColor="@color/black"
+        android:layout_gravity="bottom"
+        android:scrollbarSize="24dp"
+        android:textAlignment="center"
+        app:elevation="12dp"
+        app:itemBackground="@color/white"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/bg_card_color"
+        app:itemPaddingBottom="24dp"
+        app:itemTextColor="#426E91"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/blue"
-        android:text="Balanse"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AddEvent" />
-
-    <Button
-        android:id="@+id/logout_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/lemon"
-        android:text="Logout"
-        tools:layout_editor_absoluteX="311dp"
-        tools:layout_editor_absoluteY="6dp"></Button>
-
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
