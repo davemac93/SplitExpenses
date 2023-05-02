@@ -1,42 +1,65 @@
 package com.example.myapplication
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.example.myapplication.SignInActivity
+
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var auth: FirebaseAuth
+    private lateinit var friendsFragment: FriendsFragment
+    private lateinit var eventsFragment: EventsFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val buttonClick = findViewById<Button>(R.id.FriendsList)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, FriendsList::class.java)
-            startActivity(intent)
-        }
-        val buttonClick1 = findViewById<Button>(R.id.AddEvent)
-        buttonClick1.setOnClickListener {
-            val intent = Intent(this, NewEvent::class.java)
-            startActivity(intent)
-        }
-        val buttonClick2 = findViewById<Button>(R.id.logout_button)
-        buttonClick2.setOnClickListener {
-            logout()
+        auth = FirebaseAuth.getInstance()
+        val currentUser = auth.currentUser
+
+        if (currentUser == null) {
+            // Przenieś użytkownika do LoginActivity, jeśli nie jest zalogowany
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
+            finish()
+            return
+        }
+
+        setContentView(R.layout.activity_main)
+
+        // Initialize fragments
+        friendsFragment = FriendsFragment()
+        eventsFragment = EventsFragment()
+
+        // Set up bottom navigation
+        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigation.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.navigation_friends -> {
+                    replaceFragment(friendsFragment)
+                }
+                R.id.navigation_events -> {
+                    replaceFragment(eventsFragment)
+                }
+            }
+            true
+        }
+
+        // Set default fragment
+        replaceFragment(friendsFragment)
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment_container, fragment)
+            commit()
         }
     }
-
-    fun logout() {
-        val auth = FirebaseAuth.getInstance()
-        auth.signOut()
-        println("User logged out.")
-    }
-
-
 }
 
 

@@ -13,5 +13,9 @@
     <color name="yellow">#FFC801</color>
     <color name="bg_color">#040507</color>
     <color name="bg_card_color">#423F5B</color>
-
+    <color name="button">#5C7C87</color>
+    <color name="hint">#86B5C6</color>
+    <color name="tblue">#34B8D9</color>
+    <color name="gray">#314147</color>
+    <color name="textcolor">#769FAD</color>
 </resources>

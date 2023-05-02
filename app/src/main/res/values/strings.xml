@@ -15,5 +15,54 @@
     <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
     <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="add_participants">Add participants</string>
+    <string name="add_expense">Add expense</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="events">string</string>
+    <string name="event_added_successfully">Event added successfully</string>
+    <string name="error_adding_event">Error adding event: %1$s</string>
+    <string name="friends">friends</string>
+    <string name="Events">Events</string>
+    <string name="Friends">Friends</string>
+    <string name="enter_friend_name">Enter friend name</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="save">save</string>
+    <string name="expense_category">Expense category</string>
+    <string name="expense_amount_hint">Expense amount</string>
+    <string name="expense_amount">Expense amount</string>
+    <string name="expense_name">Expense name</string>
+    <string name="expense_name_hint">Expense name</string>
+    <string name="delete_participant_content_description">Delete participant</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email"> email</string>
+    <string name="all_fields_required">All fields required</string>
+    <string name="friend_added">Friend added</string>
+    <string name="error_adding_friend">Error adding friend</string>
+    <string name="add_event">Add event</string>
+    <string name="error_fetching_events">Error fetching events</string>
+    <string name="fill_all_fields">Fill all fields</string>
+    <string name="event_name">Event name</string>
+    <string name="event_date">Event date DD-MM-YYYY</string>
+    <string name="event_description">Event description</string>
+    <string name="select_category">Select category</string>
+    <string name="error_fetching_expenses">Error fetching expenses: %1$s</string>
+    <string name="error_fetching_participants">Error fetching participants: %1$s</string>
+    <string name="participants_added_successfully">Participants added successfully</string>
+    <string name="error_adding_participants">Error adding participants</string>
+    <string name="select_at_least_one_friend">Select at least one friend</string>
+    <string name="save_event">Save event</string>
+    <string name="save_expense">Save expense</string>
+    <string name="payer">Payer</string>
+    <string name="error_fetching_friends">Error fetching friends</string>
+    <string name="expense_added_successfully">Expense added succefully</string>
+    <string name="error_saving_expense">Error saving expense</string>
+    <string name="expense_saved_successfully">Expense saved succesfully</string>
+    <string name="error_user_not_logged_in">erro user not logged in</string>
+    <string name="error_invalid_amount">Invalid emount</string>
+    <string name="error_fill_all_fields">Fill all fields</string>
+    <string name="SplitExpenses">Split Expenses</string>
+
 </resources>
