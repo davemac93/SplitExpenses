@@ -63,5 +63,6 @@
     <string name="error_user_not_logged_in">erro user not logged in</string>
     <string name="error_invalid_amount">Invalid emount</string>
     <string name="error_fill_all_fields">Fill all fields</string>
+    <string name="SplitExpenses">Split Expenses</string>
 
 </resources>
